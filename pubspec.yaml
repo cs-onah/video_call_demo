@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  jitsi_meet_wrapper: ^0.0.6
 
 dev_dependencies:
   flutter_test:
