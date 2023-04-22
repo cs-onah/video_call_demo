@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Video Call Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const NewScreen(),
     );
@@ -25,7 +25,7 @@ class NewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("App")),
+      appBar: AppBar(title: const Text("Video Call")),
       body: ListView(
         padding: const EdgeInsets.all(24),
         children: [
