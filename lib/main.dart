@@ -30,11 +30,11 @@ class NewScreen extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         children: [
           ElevatedButton(
-            onPressed: ()=> setupCall(email: "csonah@gmail.com", avatar: "https://images.unsplash.com/photo-1616790876844-97c0c6057364?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBnaXJsfGVufDB8fDB8fA%3D%3D&w=1000&q=80"),
+            onPressed: ()=> setupCall(name: "Ebuka", email: "csonah@gmail.com", avatar: "https://images.unsplash.com/photo-1616790876844-97c0c6057364?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXQlMjBnaXJsfGVufDB8fDB8fA%3D%3D&w=1000&q=80"),
             child: const Text("Join Meeting as user 1"),
           ),
           ElevatedButton(
-            onPressed: ()=> setupCall(email: "cynthia@gmail.com", avatar: "https://burst.shopifycdn.com/photos/model-in-gold-fashion.jpg?width=1200&format=pjpg&exif=1&iptc=1"),
+            onPressed: ()=> setupCall(name: "Cynthia", email: "cynthia@gmail.com", avatar: "https://burst.shopifycdn.com/photos/model-in-gold-fashion.jpg?width=1200&format=pjpg&exif=1&iptc=1"),
             child: const Text("Join Meeting as user 2"),
           ),
         ],
@@ -42,11 +42,12 @@ class NewScreen extends StatelessWidget {
     );
   }
 
-  void setupCall({required String email, required String avatar}) async {
+  void setupCall({required String email, required String avatar, required String name}) async {
     var options = JitsiMeetingOptions(
       roomNameOrUrl: 'xyz-abc',
       userEmail: email,
       subject: "Random call",
+      userDisplayName: name,
       userAvatarUrl: avatar
     );
     await JitsiMeetWrapper.joinMeeting(options: options);
