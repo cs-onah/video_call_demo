@@ -48,7 +48,7 @@ class NewScreen extends StatelessWidget {
       userEmail: email,
       subject: "Random call",
       userDisplayName: name,
-      userAvatarUrl: avatar
+      userAvatarUrl: avatar,
     );
     await JitsiMeetWrapper.joinMeeting(options: options);
   }
