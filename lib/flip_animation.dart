@@ -61,7 +61,7 @@ class FlipTest extends HookWidget {
                       ),
                     ),
                     Transform.translate(
-                      offset: Offset(controller.value * (containerWidth +20), 0),
+                      offset: Offset(controller.value * (containerWidth +20 + 20), 0),
                       child: Transform.scale(
                         alignment: Alignment.bottomLeft,
                         scale: 1 + (controller.value * 0.5),
